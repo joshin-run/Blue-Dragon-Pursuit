@@ -25,6 +25,7 @@ function answer() {
   }
 }
 function search() {
+  document.getElementById("demo").innerHTML = prompt.search.jump;
   alert("You jump to your feet and tumble to a place behind a tall boulder jetting out of the earth ten feet away. Did he see you? You hope not.");
   var weapon = prompt("As you crouch lower, you start to move toward your chosen weapon of attack. What whill you choose to fight the great blue dragon with? Your sword, bow and arrow, or the sharp rock you just found under your left foot? Choose sword, bow, or rock.");
   if (weapon === "sword") {

@@ -1,0 +1,19 @@
+#grid-wrapper
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 150px auto 200px
+  height: 100vh
+
+@media screen and (min-width: 481px)
+  #grid-wrapper
+    grid-template-rows: 75px auto 100px
+
+@media screen and (min-width: 769px)
+  #grid-wrapper
+    grid-template-rows: 50px auto 75px
+//
+// @media screen and (min-width: 800px) {
+//   .wrapper {
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//   }
+// }
