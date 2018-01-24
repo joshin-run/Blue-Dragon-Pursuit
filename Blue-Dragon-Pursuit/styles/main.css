@@ -1,0 +1,77 @@
+.flex-center-center {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: url(../assets/images/waters-edge.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 150px;
+  height: 100vh;
+  width: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#title {
+  margin: 0;
+  /* padding: 10px; */
+  /* padding: 20px 0 0 0; */
+  background-color: rgba(0,0,0,1);
+  width: 100vw;
+}
+
+#title p {
+  margin: 0;
+  padding: 30px;
+  font-size: 4.5em;
+  font-family: monospace;
+  color: #5b89b7;
+  /* text-shadow: -1px 7px 10px rgba(0,0,0,0.6); */
+  text-align: center;
+  /* color: #6699CC; */
+  /* padding: 80px 0 40px 0; */
+}
+
+#intro {
+  height: 100%;
+  width: 100%;
+}
+
+.play-button {
+  height: 50px;
+  width: 200px;
+  background: #141e28;
+  border: 1px solid #283d51;
+  transition: .5s ease-in-out;
+  color: slategray;
+  font-size: 1.25em;
+  font-family: monospace;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.play-button:hover {
+  color: lightgray;
+  background-color: #1e2d3d;
+  /* background-color: #283d51; */
+}
+
+#logo {
+  margin-right: 40px;
+  height: 80px;
+  width: auto;
+}
