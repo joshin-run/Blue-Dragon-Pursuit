@@ -14,13 +14,15 @@ body
 #nav
   grid-column: 1 / 2
   grid-row: 1 / 2
-  // height: 120px
-  // height: 54px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
   width: 100vw
   background-color: #000
 
   img
-    height: 70%
+    height: 36px
     // height: 28px
     width: auto
     margin-left: 20px
@@ -28,16 +30,66 @@ body
 #banner
   grid-column: 1 / 2
   grid-row: 2 / 3
-  // height: 82vh
-  width: 100vw
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  align-content: center
   background-image: url(../assets/images/waters-edge.jpg)
   background-size: cover
-  // position: fixed
-  // bottom: 0
+  width: 100vw
+
+  .banner-content
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+    height: 100%
+    width: 100%
+    // background-color: rgba(0,0,0,0.7)
+    background: linear-gradient(to bottom right, rgba(0,0,176,0.3), rgba(0,0,5,0.7), rgba(0,76,0,0.3))
+    // background: linear-gradient(to bottom right, rgba(0,0,176,0.3), rgba(0,76,0,0.3))
+
+    img
+      height: 200px
+      width: auto
+      margin-bottom: 50px
+
+    p
+      font-size: 4.5em
+      margin-bottom: 50px
+      // text-align: center
+      // width: 100%
+
+  .play-button
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    height: 50px
+    width: 200px
+    background: #141e28
+    border: 1px solid #283d51
+    transition: .5s ease-in-out
+    color: slategray
+    font-size: 1.15em
+    font-family: monospace
+    cursor: pointer
+    border-radius: 3px
+    // text-align: center
+
+  .play-button:hover
+    color: lightgray
+    background-color: #1e2d3d
+    /* background-color: #283d51  */
 
 #footer
   grid-column: 1 / 2
   grid-row: 3 / 4
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
   // height: 150px
   // height: 75px
   width: 100vw
@@ -116,23 +168,7 @@ body
 //   width: 100%
 //
 //
-// .play-button
-//   height: 50px
-//   width: 200px
-//   background: #141e28
-//   border: 1px solid #283d51
-//   transition: .5s ease-in-out
-//   color: slategray
-//   font-size: 1.25em
-//   font-family: monospace
-//   cursor: pointer
-//   border-radius: 3px
-//
-//
-// .play-button:hover
-//   color: lightgray
-//   background-color: #1e2d3d
-//   /* background-color: #283d51  */
+
 //
 //
 // #logo
