@@ -1,6 +1,6 @@
 let intro = {
   expose: "You've searched high and low for the blue dragon...but, to no avail. The weeks have been long and treacherous. The great falcon, sent by the hand of Lady Nelwyn, has led you to the northern stretches of the world. You watch as the great bird leaps into the air and soon resembles a gray fleck upon heaven's landscape.",
-  alone: "Now, you are alone. The wind is cold and smells like salt. It seems as though the sea of stone and fog before you may be your resting place after all."
+  alone: "Now, you are alone. The wind is cold and smells like salt. It seems as though the sea of stone and fog before you may be your resting place after all. What will you do now? Lay down and die, search the sky in hopes to find the dragon, or rummage in your pack for your final meal? (Type die, find, or eat.)"
 }
 
 let firstAction = {
@@ -23,20 +23,73 @@ function play() {
   document.getElementById("game-play").style.display = "flex";
   document.getElementById("story").innerHTML = intro.expose;
 }
+
+function next() {
+  document.getElementById("story-board-image").style.backgroundImage = "url(./assets/images/lone.jpg)";
+  document.getElementById("story").innerHTML = intro.alone;
+  // let input = document.getElementById("story").createElement("INPUT");
+  // input.appendChild(document.createTextNode("test"));
+  // document.body.appendChild(input);
+  document.getElementById("user-input").style.display = "block";
+}
+
+let node = document.getElementById('user-input');
+let action = document.getElementById('user-input').value;
+node.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    if (action === "die") {
+      document.getElementById("banner-content").innerHTML = firstAction.die;
+    } else if (action === "find") {
+      document.getElementById("banner-content").innerHTML = firstAction.find;
+    } else if (action === "eat") {
+      document.getElementById("banner-content").innerHTML = firstAction.eat;
+    } else {
+      console.log("next() logged");
+    }
+  }
+});
+
+// function answerOne() {
+//   // if (!e) e = window.event;
+//   // if (e.keyCode == '13'){
+//   let action = document.getElementById("user-input").value;
+//   if(characterCode == 13) {
+//     if (action === "die") {
+//       document.getElementById("banner-content").innerHTML = firstAction.die;
+//     } else if (action === "find") {
+//       document.getElementById("banner-content").innerHTML = firstAction.find;
+//     } else if (action === "eat") {
+//       document.getElementById("banner-content").innerHTML = firstAction.eat;
+//     } else {
+//       console.log("next() logged");
+//     }
+//     return true;
+//   }
+// }
+
+
+// document.getElementById("user-input").addEventListener("click", answerOne());
+
+// function answerOne () {
+//   console.log("answerOne");
+//   let action = document.getElementById("user-input").value;
+//   if (action === "die") {
+//     document.getElementById("banner-content").innerHTML = firstAction.die;
+//   } else if (action === "find") {
+//     document.getElementById("banner-content").innerHTML = firstAction.find;
+//   } else if (action === "eat") {
+//     document.getElementById("banner-content").innerHTML = firstAction.eat;
+//   } else {
+//     console.log("next() logged");
+//   }
+// }
 // document.getElementById("play-content").innerHTML = intro;
 
 // function nextButton() {
 //
 // }
 
-// function answer() {
-//   if (action === "die") {
-//     document.getElementById("banner-content").innerHTML = firstAction.die;
-//   } else if (action === "search") {
-//   } else if (action === "meal") {
-//   } else {
-//   }
-// }
 
 // function search() {
 //   document.getElementById("demo").innerHTML = prompt.search.jump;
