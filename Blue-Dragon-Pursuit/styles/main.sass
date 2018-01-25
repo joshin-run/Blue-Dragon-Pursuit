@@ -1,15 +1,39 @@
 @import "flexbox"
+@import "fonts"
 @import "grid"
 
 *
   margin: 0
   padding: 0
   // box-sizing: border-box
-  font-family: monospace
+  // font-family: monospace
   color: #5b89b7
 
 body
   height: 100%
+
+button
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  background: #2d445b
+  border: 1px solid #7ba0c5
+  transition: .5s ease-in-out
+  color: lightgray
+  font-family: monospace
+  cursor: pointer
+  border-radius: 3px
+
+button:hover
+  color: lightgray
+  background-color: #1e2d3d
+
+.play-button
+  height: 125px
+  width: 50vw
+  font-size: 2.5em
+  background-color: #121b24
 
 #nav
   grid-column: 1 / 2
@@ -22,10 +46,30 @@ body
   background-color: #000
 
   img
-    height: 36px
+    height: 95px
     // height: 28px
     width: auto
-    margin-left: 20px
+    margin-left: 30px
+
+  .nav-right
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    height: 100%
+    width: auto
+
+    .reset-button
+      height: 80px
+      width: 200px
+      font-size: 2.5em
+      margin-right: 30px
+
+    .time
+      font-size: 2em
+      font-family: 'Open Sans', sans-serif
+      margin-right: 40px
+      color: #5b89b7
 
 #banner
   grid-column: 1 / 2
@@ -47,41 +91,24 @@ body
     height: 100%
     width: 100%
     // background-color: rgba(0,0,0,0.7)
-    background: linear-gradient(to bottom right, rgba(0,0,176,0.3), rgba(0,0,5,0.7), rgba(0,76,0,0.3))
-    // background: linear-gradient(to bottom right, rgba(0,0,176,0.3), rgba(0,76,0,0.3))
+    // background: linear-gradient(to bottom right, rgba(0,0,176,0.3), rgba(0,0,5,0.7), rgba(0,76,0,0.3))
+    background: linear-gradient(rgba(0,0,176,0.4), rgba(0,136,0,0.2))
 
     img
-      height: 200px
+      height: 350px
       width: auto
       margin-bottom: 50px
 
     p
-      font-size: 4.5em
+      font-size: 6.5em
       margin-bottom: 50px
+      font-family: 'Aubrey', cursive
+      margin-bottom: 200px
+      // font-family: 'Alex Brush', cursive
+      // font-family: 'Berkshire Swash', cursive
+      // text-shadow: -1px 3px 5px rgba(0,0,0,0.6)
       // text-align: center
       // width: 100%
-
-  .play-button
-    display: flex
-    flex-flow: row nowrap
-    justify-content: center
-    align-items: center
-    height: 50px
-    width: 200px
-    background: #141e28
-    border: 1px solid #283d51
-    transition: .5s ease-in-out
-    color: slategray
-    font-size: 1.15em
-    font-family: monospace
-    cursor: pointer
-    border-radius: 3px
-    // text-align: center
-
-  .play-button:hover
-    color: lightgray
-    background-color: #1e2d3d
-    /* background-color: #283d51  */
 
 #footer
   grid-column: 1 / 2
@@ -94,13 +121,19 @@ body
   // height: 75px
   width: 100vw
   background-color: #000
-  font-size: 2em
+  font-size: 1.5em
+  font-family: 'Open Sans', sans-serif
+
+.main-content
+  font-family: 'Open Sans', sans-serif
+
+
 
 @media screen and (min-width: 481px)
 
 @media screen and (min-width: 769px)
-  #footer
-    font-size: 1em
+  // #footer
+  //   font-size: 1em
 
 
 
@@ -146,7 +179,7 @@ body
 //   width: 100vw
 //   font-family: monospace
 //   color: #5b89b7
-//   /* text-shadow: -1px 7px 10px rgba(0,0,0,0.6)  */
+
 //   text-align: center
 //
 //

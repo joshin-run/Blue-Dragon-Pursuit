@@ -5,21 +5,31 @@
     <title>Blue Dragon Pursuit</title>
     <script src="./scripts/main.js"></script>
     <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
   </head>
   <body>
     <div id="grid-wrapper">
 
       <div id="nav">
-        <img src="./assets/images/bluedragon7.png">
+        <img id="nav-logo" src="./assets/images/bluedragon7.png">
+        <div class="nav-right">
+          <button id="reset" type="button" class="reset-button" onclick="reset()">RESET</button>
+        </div>
       </div>
 
       <div id="banner">
-        <div class="banner-content">
+        <div id="banner-content" class="banner-content">
           <!-- <div> -->
-          <img src="./assets/images/bluedragon7.png">
+          <img id="banner-logo" src="./assets/images/bluedragon7.png">
           <!-- </div> -->
-          <p>BLUE DRAGON PURSUIT</p>
-          <button type="button" class="play-button" onclick="play()">PLAY GAME</button>
+          <p id="title">Blue Dragon Pursuit</p>
+          <button id="play-button" type="button" class="play-button" onclick="play()">PLAY GAME</button>
+
+          <div id="game-play">
+            <p id="banner-content"></p>
+          <div>
+
         </div>
       </div>
 
