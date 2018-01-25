@@ -1,7 +1,7 @@
 let intro = {
-  expose: "You've searched high and low for the blue dragon. The weeks have been long and treacherous. The great falcon, sent by the hand of Lady Nelwyn has led you to the northern stretches of the world. You watch as the great bird leaps into the air and soon resembles a gray fleck upon heaven's landscape.",
+  expose: "You've searched high and low for the blue dragon...but, to no avail. The weeks have been long and treacherous. The great falcon, sent by the hand of Lady Nelwyn, has led you to the northern stretches of the world. You watch as the great bird leaps into the air and soon resembles a gray fleck upon heaven's landscape.",
   alone: "Now, you are alone. The wind is cold and smells like salt. It seems as though the sea of stone and fog before you may be your resting place after all."
-]
+}
 
 let firstAction = {
     die: "Suddenly, as you were about to lay down and give in to the injustices of your fate, the great talons of the blue dragon dig into your shoulders as his massive arms launch you into the tangle of jagged rocks ahead. You have just enough time to look back and see the beauty of such a beast right before you realize you left your helmet at the castle. Game over!!!",
@@ -20,9 +20,10 @@ function play() {
   document.getElementById("banner-logo").style.display = "none";
   document.getElementById("title").style.display = "none";
   document.getElementById("play-button").style.display = "none";
-  // document.getElementById("game-play").style.display = "block";
-  // document.getElementById("play-content").innerHTML = intro;
+  document.getElementById("game-play").style.display = "flex";
+  document.getElementById("story").innerHTML = intro.expose;
 }
+// document.getElementById("play-content").innerHTML = intro;
 
 // function nextButton() {
 //

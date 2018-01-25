@@ -6,20 +6,15 @@
   src: url(../assets/fonts/Open_Sans/OpenSans-Regular.ttf); }
 #grid-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 150px auto 200px;
+  grid-template-columns: 100vw;
+  grid-template-rows: 50px auto 50px;
   height: 100vh; }
 
-@media screen only and (min-width: 481px) {
-  #grid-wrapper {
-    grid-template-rows: 75px auto 100px; } }
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   color: #5b89b7; }
-
-body {
-  height: 100%; }
 
 button {
   display: flex;
@@ -27,7 +22,7 @@ button {
   justify-content: center;
   align-items: center;
   background: #2d445b;
-  border: 1px solid #7ba0c5;
+  border: 1px solid #24303b;
   transition: 0.5s ease-in-out;
   color: lightgray;
   font-family: monospace;
@@ -36,12 +31,13 @@ button {
 
 button:hover {
   color: lightgray;
-  background-color: #1e2d3d; }
+  background-color: #1e2d3d;
+  border: 1px solid #7ba0c5; }
 
 .play-button {
-  height: 125px;
-  width: 50vw;
-  font-size: 2.5em;
+  height: 50px;
+  width: 200px;
+  font-size: 1.155em;
   background-color: #121b24;
   margin: 0; }
 
@@ -53,23 +49,16 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  background-color: #000; }
+  height: auto;
+  background-color: #000;
+  padding: 5px 10px; }
   #nav img {
-    height: 95px;
-    width: auto;
-    margin-left: 30px; }
-  #nav .nav-right {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    height: 90%;
     width: auto; }
-    #nav .nav-right .reset-button {
-      height: 80px;
-      width: 200px;
-      font-size: 2.5em;
-      margin-right: 30px; }
+  #nav .reset-button {
+    height: 90%;
+    width: 75px;
+    font-size: 1em; }
 
 #banner {
   grid-column: 1/2;
@@ -81,7 +70,8 @@ button:hover {
   align-content: center;
   background-image: url(../assets/images/waters-edge.jpg);
   background-size: cover;
-  width: 100vw; }
+  width: 100vw;
+  height: 100%; }
   #banner .banner-content {
     display: flex;
     flex-flow: column nowrap;
@@ -91,16 +81,54 @@ button:hover {
     width: 100%;
     background: linear-gradient(rgba(0, 0, 176, 0.4), rgba(0, 136, 0, 0.2)); }
     #banner .banner-content img {
-      height: 350px;
+      height: 150px;
       width: auto;
-      margin-bottom: 50px; }
+      margin-bottom: 20px; }
     #banner .banner-content p {
-      font-size: 6.5em;
-      margin-bottom: 50px;
+      font-size: 2.5em;
       font-family: "Aubrey", cursive;
-      margin-bottom: 100px; }
-    #banner .banner-content #game-play {
-      display: none; }
+      margin-bottom: 70px; }
+
+#game-play {
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  width: 300px;
+  height: 550px;
+  box-shadow: #fff;
+  box-shadow: -6px 15px 20px rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden; }
+  #game-play #story-board-image {
+    height: 250px;
+    width: 100%;
+    background-color: lightgreen;
+    background-image: url(../assets/images/bird.jpg);
+    background-size: cover; }
+  #game-play #play-content {
+    height: 270px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px; }
+    #game-play #play-content #story {
+      font-size: 0.85em;
+      font-family: "Open Sans", sans-serif; }
+  #game-play #progress-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    padding: 0 30px;
+    background-color: #88a9ca; }
+    #game-play #progress-buttons p {
+      margin: 0;
+      font-size: 1.25em;
+      color: #fff; }
 
 #footer {
   grid-column: 1/2;
@@ -110,11 +138,9 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 100%;
   background-color: #000;
-  font-size: 1.5em;
-  font-family: "Open Sans", sans-serif; }
-
-.main-content {
+  font-size: 0.65em;
   font-family: "Open Sans", sans-serif; }
 
 /*# sourceMappingURL=main.css.map */

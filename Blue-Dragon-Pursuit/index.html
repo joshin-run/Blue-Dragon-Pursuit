@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Blue Dragon Pursuit</title>
     <script src="./scripts/main.js"></script>
     <link rel="stylesheet" href="./styles/main.css">
@@ -13,9 +14,7 @@
 
       <div id="nav">
         <img id="nav-logo" src="./assets/images/bluedragon7.png">
-        <div class="nav-right">
-          <button id="reset" type="button" class="reset-button" onclick="reset()">RESET</button>
-        </div>
+        <button id="reset" type="button" class="reset-button" onclick="reset()">RESET</button>
       </div>
 
       <div id="banner">
@@ -25,7 +24,15 @@
           <button id="play-button" type="button" class="play-button" onclick="play()">PLAY GAME</button>
 
           <div id="game-play">
-            <p id="play-content"></p>
+            <div id="story-board-image">
+            </div>
+            <div id="play-content">
+              <p id="story"></p>
+            </div>
+            <div id="progress-buttons">
+              <p onclick="back()">&lt;</p>
+              <p onclick="next()">&gt;</p>
+            </div>
           </div>
 
         </div>
