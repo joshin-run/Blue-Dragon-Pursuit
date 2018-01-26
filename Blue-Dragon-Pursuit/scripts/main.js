@@ -1,7 +1,14 @@
-let intro = {
-  expose: "You've searched high and low for the blue dragon...but, to no avail. The weeks have been long and treacherous. The great falcon, sent by the hand of Lady Nelwyn, has led you to the northern stretches of the world. You watch as the great bird leaps into the air and soon resembles a gray fleck upon heaven's landscape.",
-  alone: "Now, you are alone. The wind is cold and smells like salt. It seems as though the sea of stone and fog before you may be your resting place after all. What will you do now? Lay down and die, search the sky in hopes to find the dragon, or rummage in your pack for your final meal? (Type die, find, or eat.)"
+let opening = {
+  intro: "You've searched high and low for the mighty blue dragon...but, to no avail. You gaze out over the ocean and watch the waves roll over the gray stones that jut from the sea's fog ridden surface, then let out a deep sign. How can you be expected to find such a beast where the clouded sky, a tangled forest, and the ocean's stoney figures conceal his next scheme? Unless...he finds you first.",
+  choose: "The sun now melts into the horizon. Night is fast approaching. The salty wind blows ever colder. You must make haste! Will you sit down and rest for a while and think, explore the sandy terrain, or search your pack for something to eat? 'Never fight an angry dragon on an empty stomach!' you're mother always said. (Type rest, explore, or eat.)"
 }
+
+// let intro = {
+//   expose: "You've searched high and low for the mighty blue dragon...but, to no avail. The weeks have been long and treacherous. The great falcon, sent by the hand of Lady Nelwyn, has led you to the northern stretches of the world. You watch as the great bird leaps into the air and soon resembles a gray fleck upon heaven's landscape.",
+//   alone: "Now, you are alone. The wind is cold and smells like salt. It seems as though the sea of stone and fog before you may be your resting place after all. What will you do now? Lay down and die, search the sky in hopes to find the dragon, or rummage in your pack for your final meal? (Type die, find, or eat.)"
+// }
+
+let rocks = "Dark, gray stones jut out from the still surface of the sea before you. Dark, gray stones jut out from the still surface of the sea before you, each one resembling a dragon's face, ... possibility of finding a dragon has become hopeless. unless he finds you first. you"
 
 let firstAction = {
     die: "Suddenly, as you were about to lay down and give in to the injustices of your fate, the great talons of the blue dragon dig into your shoulders as his massive arms launch you into the tangle of jagged rocks ahead. You have just enough time to look back and see the beauty of such a beast right before you realize you left your helmet at the castle. Game over!!!",
@@ -21,12 +28,12 @@ function play() {
   document.getElementById("title").style.display = "none";
   document.getElementById("play-button").style.display = "none";
   document.getElementById("game-play").style.display = "flex";
-  document.getElementById("story").innerHTML = intro.expose;
+  document.getElementById("story").innerHTML = opening.intro;
 }
 
 function next() {
-  document.getElementById("story-board-image").style.backgroundImage = "url(./assets/images/lone.jpg)";
-  document.getElementById("story").innerHTML = intro.alone;
+  document.getElementById("story-board-image").style.backgroundImage = "url(./assets/images/sunset.jpg)";
+  document.getElementById("story").innerHTML = opening.choose;
   document.getElementById("user-input").style.display = "block";
   // let input = document.getElementById("story").createElement("INPUT");
   // input.appendChild(document.createTextNode("test"));
