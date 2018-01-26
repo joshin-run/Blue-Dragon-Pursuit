@@ -27,10 +27,10 @@ function play() {
 function next() {
   document.getElementById("story-board-image").style.backgroundImage = "url(./assets/images/lone.jpg)";
   document.getElementById("story").innerHTML = intro.alone;
+  document.getElementById("user-input").style.display = "block";
   // let input = document.getElementById("story").createElement("INPUT");
   // input.appendChild(document.createTextNode("test"));
   // document.body.appendChild(input);
-  document.getElementById("user-input").style.display = "block";
 }
 
 let node = document.getElementById('user-input');
